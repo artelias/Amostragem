@@ -1,13 +1,13 @@
 # Atividade Extra amostragem
-# Aluno:Arthur Hneiruq Elias de Lima
+# Aluno:Arthur Henrique Elias de Lima
 # Definindo variaveis 
-mec‚nico=c(1,2,3,4,5,6,7,8)
-mec‚nico=as.character(mec‚nico)
+mec√¢nico=c(1,2,3,4,5,6,7,8)
+mec√¢nico=as.character(mec√¢nico)
 tempo=c(62,75,60,65,81,71,77,89)
 N=50;n=8;pik=n/N;yk=tempo
 
-# Oriando data.frame pra visualizaÁ„o 
-tabela1=data.frame(mec‚nico,tempo)
+# Oriando data.frame pra visualiza√ß√£o 
+tabela1=data.frame(mec√¢nico,tempo)
 tabela1
 
 # Estimador de HH para variancia 
@@ -26,8 +26,8 @@ Y_HH=function(pik,yk,N){
 # Comparativo das medias
 Y_HH(8/50,tempo,N=50)
 mean(tempo)
-# Observamos que o estimador È centrado, pois a media Y_HH,
-# È igual a media da amostra
+# Observamos que o estimador √© centrado, pois a media Y_HH,
+# √© igual a media da amostra
 
 
 #LETRA C
@@ -40,10 +40,10 @@ varY_HT=function(yk,pik,n){
   return(var_HT)
 }
 HT=varY_HT(tempo,pik,n);HT
-# Temos que o estimador de HH apresenta vari‚ncia maior que o
-# estimador HT. Portanto, no caso estudado, o estimador HT È
-# mais eficiÍnte.
+# Temos que o estimador de HH apresenta vari√¢ncia maior que o
+# estimador HT. Portanto, no caso estudado, o estimador HT √©
+# mais efici√™nte.
 ic_media_Y_HT <- c(mean(tempo) + qt(0.025, n - 1)*HT,
                    mean(tempo) + qt(0.975, n - 1)*HT); ic_media_Y_HT
-#a um intervalo de confianÁa de 95%,
-#HT est· entre [47.81332 ; 97.18668]
+#a um intervalo de confian√ßa de 95%,
+#HT est√° entre [47.81332 ; 97.18668]
